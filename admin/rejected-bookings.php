@@ -79,8 +79,8 @@ else{
                     <th>Name</th>
                     <th>Email Id</th>
                     <th>Mobile No</th>
-                    <th>No. Adults</th>
-                    <th>No of Childrens</th>
+                    <th>Floor</th>
+                    <th>Desks</th>
                     <th>Boking Date/Time</th>
                      <th>Posting Date</th>
                     <th>Action</th>
@@ -116,8 +116,8 @@ while($result=mysqli_fetch_array($query)){
                     <th>Name</th>
                     <th>Email Id</th>
                     <th>Mobile No</th>
-                    <th>No. Adults</th>
-                    <th>No of Childrens</th>
+                    <th>Floor</th>
+                    <th>Desks</th>
                     <th>Boking Date/Time</th>
                      <th>Posting Date</th>
                     <th>Action</th>

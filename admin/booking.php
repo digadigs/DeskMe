@@ -1,3 +1,28 @@
+<?php include_once('../admin/includes/config.php');
+
+if(isset($_POST['submit'])){
+
+$fname=$_POST['name'];
+$emailid=$_POST['email'];
+$phonenumber=$_POST['phonenumber'];
+$bookingdate=$_POST['bookingdate'];
+$bookingtime=$_POST['bookingtime'];
+$noadults=$_POST['noadults'];
+$nochildrens=$_POST['nochildrens'];
+$bno=mt_rand(100000000,9999999999);
+//Code for Insertion
+$query=mysqli_query($con,"insert into tblbookings(bookingNo,fullName,emailId,phoneNumber,bookingDate,bookingTime,noAdults,noChildrens) values('$bno','$fname','$emailid','$phonenumber','$bookingdate','$bookingtime','$noadults','$nochildrens')");
+if($query){
+echo '<script>alert("Your order sent successfully. Booking number is "+"'.$bno.'")</script>';
+echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
+} else {
+echo "<script>alert('Something went wrong. Please try again.');</script>";
+}
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,37 +36,45 @@
 
 <form class="booking-form" action="#" method="post">
   <div class="elem-group">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name:" required>
   </div>
   <div class="elem-group">
-    <label for="email">Your E-mail</label>
-    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+    <label for="email">Your E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="@gmail.com" required>
   </div>
   <div class="elem-group">
-    <label for="phone">Your Phone</label>
-    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    <label for="phone">Mobile:</label>
+    <input type="tel" id="phone" name="phonenumber" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
   </div>
   <hr>
   <div class="elem-group inlined">
-    <label for="checkin-date">Check-in Date</label>
-    <input type="date" id="checkin-date" name="checkin" required>
+    <label for="checkin-date">Check-in Date:</label>
+    <input type="date" id="checkin-date" name="bookingdate" required>
   </div>
   <div class="elem-group inlined">
-    <label for="checkout-date">Check-out Date</label>
-    <input type="date" id="checkout-date" name="checkout" required>
+    <label for="checkout-date">Check-out Date:</label>
+    <input type="date" id="checkout-date" name="bookingtime" required>
   </div>
   <div class="elem-group">
-    <label for="room-selection">Select Room Preference</label>
-    <select id="room-selection" name="room_preference" required>
+    <label for="room-selection">Select Desks:</label>
+    <select id="room-selection" name="noadults" required>
         <option value="">Floor</option>
-        <option value="connecting">Connecting</option>
-        <option value="adjoining">Adjoining</option>
-        <option value="adjacent">Adjacent</option>
+        <option value="connecting">Floor 1</option>
+        <option value="adjoining">Floor 2</option>
+        <option value="adjacent">Floor 3</option>
+    </select>
+  </div>
+  <div class="elem-group">
+    <select id="room-selection" name="nochildrens" required>
+        <option value="">Desks</option>
+        <option value="connecting">Desks 1A</option>
+        <option value="adjoining">Desks 2A</option>
+        <option value="adjacent">Desks 3A</option>
     </select>
   </div>
   <hr>
-  <button type="submit">Book The Rooms</button>
+  <button type="submit" name="submit">Book Desk</button>
 </form>
     
 </body>
@@ -50,10 +83,12 @@
 <style>
 
 .booking-form {
-  width: 370px;
+  width: 250px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 30px;
   background: #fff;
+  float: left;
+  margin-left: 150px;
 }
 
 div.elem-group {
@@ -61,10 +96,8 @@ div.elem-group {
 }
 
 div.elem-group.inlined {
-  width: 49%;
-  display: inline-block;
-  float: left;
-  margin-left: 1%;
+  width: 100%;
+  margin-left: 2.5%;
 }
 
 label {
@@ -86,7 +119,6 @@ input, select, textarea {
 
 div.elem-group.inlined input {
   width: 95%;
-  display: inline-block;
 }
 
 textarea {
@@ -99,7 +131,7 @@ hr {
 
 button {
   height: 50px;
-  background: orange;
+  background: #1E4B74;
   border: none;
   color: white;
   font-size: 1.25em;
@@ -110,7 +142,7 @@ button {
 }
 
 button:hover {
-  background: #333;
+  background: #0a2a48;
 }
 
 </style>
