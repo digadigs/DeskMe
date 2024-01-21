@@ -120,11 +120,11 @@ while($result=mysqli_fetch_array($query)){
                   <tr>
                     <th> Mobile No</th>
                     <td><?php echo $result['phoneNumber']?></td>
-                    <th>No of Adults</th>
+                    <th>Floor</th>
                     <td><?php echo $result['noAdults']?></td>
                   </tr>
                   <tr>
-                    <th>No of Childs</th>
+                    <th>Desks</th>
                    <td><?php echo $result['noChildrens']?></td>
                    <th>Booking Date / Time</th>
                    <td><?php echo $date=$result['bookingDate']?>/<?php echo $btime=$result['bookingTime']?></td>
