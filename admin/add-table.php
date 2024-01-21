@@ -28,7 +28,8 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Restaurent Table Booking System  | Add Table</title>
+  <link rel=" shortcut icon" href="../assets/./favicon.png"/>
+  <title>DeskMe | Add Table</title>
 
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
 

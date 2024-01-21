@@ -27,7 +27,8 @@ echo "<script>alert('Something went wron. Please try again.');</script>";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PreSchool Enrollment System  | My Profile</title>
+  <link rel=" shortcut icon" href="../assets/./favicon.png"/>
+  <title>DeskMe | My Profile</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">

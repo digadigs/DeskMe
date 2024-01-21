@@ -74,11 +74,6 @@ if(isset($_POST['login']))
           <!-- /.col -->
         </div>
       </form>
-
-
-      <p class="mb-1">
-        <a href="password-recovery.php">Forgot Password?</a>
-      </p>
     </div>
     <!-- /.card-body -->
   </div>

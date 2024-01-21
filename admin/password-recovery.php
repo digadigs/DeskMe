@@ -26,7 +26,8 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Restaurent Table Booking System| Password Recovery</title>
+  <link rel=" shortcut icon" href="../assets/./favicon.png"/>
+  <title>DeskMe | Password Recovery</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -55,7 +56,7 @@ return true;
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../index.php" class="h1"><b>Admin</b> |  PreSchool</a>
+      <a href="../index.php" class="h1"><b>Admin</b> | Recovery</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Reset your password</p>
@@ -111,7 +112,7 @@ return true;
 
 
       <p class="mb-1">
-        <a href="index.php">Signin</a>
+        <a href="index.php">Sign In</a>
       </p>
 
     </div>

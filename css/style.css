@@ -74,21 +74,10 @@ ul{
 	padding:0;
 }
 /*-- //Reset-Code --*/
-body {
-    background: url(../images/1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-height: 100vh;
-}
 .appointment-w3 {
     width: 24%;
     margin: 60px auto 50px;
-    background-color: #000;
     padding: 30px 30px;
-    border: 6px solid #fff;
 }
 h1{  padding-top: 31px;}
 h1.header-w3ls {
@@ -102,7 +91,7 @@ h1.header-w3ls {
 .personal h2,
 .information h3,
 .passport h3{
-  color:#000;
+color:#000;
 text-align:center;
 margin:.5em 0em;
 letter-spacing:3px;
@@ -138,7 +127,7 @@ letter-spacing:3px;
 width: 100%;
 box-sizing: border-box;
 background:transparent;
-color: #fff;
+color: #000000;
 letter-spacing:2px;
 border:none;
 border-bottom:1px solid #fff ;

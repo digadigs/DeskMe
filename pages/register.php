@@ -1,181 +1,39 @@
-<?php 
-    
-$showAlert = false;  
-$showError = false;  
-$exists=false; 
-    
-if($_SERVER["REQUEST_METHOD"] == "POST") { 
-      
-    // Include file which makes the 
-    // Database Connection. 
-    session_start();
-    include('./confi.php');   
-    
-    $username = $_POST["username"];  
-    $password = $_POST["password"];  
-    $cpassword = $_POST["cpassword"]; 
-            
-    
-    $sql = "Select * from tbluser where username='$username'"; 
-    
-    $result = mysqli_query($conn, $sql); 
-    
-    $num = mysqli_num_rows($result);  
-    
-    // This sql query is use to check if 
-    // the username is already present  
-    // or not in our Database 
-    if($num == 0) { 
-        if(($password == $cpassword) && $exists==false) { 
-    
-            $hash = password_hash($password,  
-                                PASSWORD_DEFAULT); 
-                
-            // Password Hashing is used here.  
-            $sql = "INSERT INTO `users` ( `username`,  
-                `password`, `date`) VALUES ('$username',  
-                '$hash', current_timestamp())"; 
-    
-            $result = mysqli_query($conn, $sql); 
-    
-            if ($result) { 
-                $showAlert = true;  
-            } 
-        }  
-        else {  
-            $showError = "Passwords do not match";  
-        }       
-    }// end if  
-    
-   if($num>0)  
-   { 
-      $exists="Username not available";  
-   }  
-    
-}//end if    
-    
-?> 
-    
-<!doctype html> 
-    
-<html lang="en"> 
-  
-<head> 
-    
-    <!-- Required meta tags -->  
-    <meta charset="utf-8">  
-    <meta name="viewport" content= 
-        "width=device-width, initial-scale=1,  
-        shrink-to-fit=no"> 
-    
-    <!-- Bootstrap CSS -->  
-    <link rel="stylesheet" href= 
-"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity= 
-"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-        crossorigin="anonymous">   
-</head> 
-    
-<body> 
-    
-<?php 
-    
-    if($showAlert) { 
-    
-        echo ' <div class="alert alert-success  
-            alert-dismissible fade show" role="alert"> 
-    
-            <strong>Success!</strong> Your account is  
-            now created and you can login.  
-            <button type="button" class="close"
-                data-dismiss="alert" aria-label="Close">  
-                <span aria-hidden="true">×</span>  
-            </button>  
-        </div> ';  
-    } 
-    
-    if($showError) { 
-    
-        echo ' <div class="alert alert-danger  
-            alert-dismissible fade show" role="alert">  
-        <strong>Error!</strong> '. $showError.'
-    
-       <button type="button" class="close" 
-            data-dismiss="alert aria-label="Close"> 
-            <span aria-hidden="true">×</span>  
-       </button>  
-     </div> ';  
-   } 
-        
-    if($exists) { 
-        echo ' <div class="alert alert-danger  
-            alert-dismissible fade show" role="alert"> 
-    
-        <strong>Error!</strong> '. $exists.'
-        <button type="button" class="close" 
-            data-dismiss="alert" aria-label="Close">  
-            <span aria-hidden="true">×</span>  
-        </button> 
-       </div> ';  
-     } 
-   
-?> 
-    
-<div class="container my-4 "> 
-    
-    <h1 class="text-center">Signup Here</h1>  
-    <form action="register.php" method="post"> 
-    
-        <div class="form-group">  
-            <label for="username">Username</label>  
-        <input type="text" class="form-control" id="username"
-            name="username" aria-describedby="emailHelp">     
-        </div> 
-    
-        <div class="form-group">  
-            <label for="password">Password</label>  
-            <input type="password" class="form-control"
-            id="password" name="password">  
-        </div> 
-    
-        <div class="form-group">  
-            <label for="cpassword">Confirm Password</label>  
-            <input type="password" class="form-control"
-                id="cpassword" name="cpassword"> 
-    
-            <small id="emailHelp" class="form-text text-muted"> 
-            Make sure to type the same password 
-            </small>  
-        </div>       
-    
-        <button type="submit" class="btn btn-primary"> 
-        SignUp 
-        </button>  
-    </form>  
-</div> 
-    
-<!-- Optional JavaScript -->  
-<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
-    
-<script src=" 
-https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-    integrity=" 
-sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-    crossorigin="anonymous"> 
-</script> 
-    
-<script src=" 
-https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-    integrity= 
-"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
-    crossorigin="anonymous"> 
-</script> 
-    
-<script src=" 
-https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"  
-    integrity= 
-"sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"> 
-</script>  
-</body>  
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <title>DeskMe | Sign Up</title>
+    <link rel=" shortcut icon" href="../assets/favicon.png"/>
+  </head>
+  <body>
+
+    <div class="mainform">
+        <div class="container" id="container">
+            <div class="form-container sign-in">
+                <form action="confi.php" method="post">
+                    <h1>Sign Up</h1>
+                    <input type="text" id="username" placeholder="Name:" required>
+                    <input type="email" id="email" placeholder="Email:" required>
+                    <input type="password" id="password" placeholder="Password:" required>
+                    <input type="password" id="cpassword" placeholder="Confirm Password:" required>
+                    <button class="btn">Sign Up</button>
+                    <a href="./login.php">Sign In</a>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello, DeskMe!</h1>
+                        <p>Unlock a world of possibilities! Register now and embark on your personalized journey with us. Your adventure begins with a single click!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="../index.php" style="color: black; margin-top: 10px">Back to Home</a>
+    </div>
+  </body>
+</html>
