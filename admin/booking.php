@@ -64,13 +64,25 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
   </div>
   <div class="elem-group">
     <label for="room-selection">Select Preference:</label>
-    <select class="form-control" id="floor-selection" name="noadults" onchange="toggleSecondDropdown()" onchange="toggleImage()" required>
+    <select class="form-control" id="floor-selection" name="noadults" onchange="toggleImageFloor()" required>
         <option value="">Floor</option>
         <option value="Floor 1">Floor 1</option>
-        <option value="Floor 2">Floor 2</option>
-        <option value="Floor 2">Floor 3</option>
+        <!-- <option value="Floor 2">Floor 2</option>
+        <option value="Floor 3">Floor 3</option> -->
     </select>
   </div>
+
+  <!-- Floor -->
+  <div id="Floor 1" class="image-container-floor">
+    <img src="../assets/Floor1.png" alt="Image1" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
+  </div>
+  <div id="Floor 2" class="image-container-floor">
+    <img src="../assets/Floor2.png" alt="Image2" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
+  </div>
+  <div id="Floor 3" class="image-container-floor">
+    <img src="../assets/Floor2.png" alt="Image2" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
+  </div>
+
   <div class="elem-group">
     <select class="form-control" id="desk-selection" name="nochildrens" onchange="toggleImage()" required>
         <option value="">Desks</option>
@@ -93,14 +105,6 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
     <img src="../assets/Highlight 1C.png" alt="Image 3" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
   </div>
 
-  <!-- Floor -->
-  <div id="Floor 1" class="image-container">
-    <img src="../assets/Floor 1.png" alt="Image 1" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
-  </div>
-  <div id="Floor 2" class="image-container">
-    <img src="../assets/Floor 2.png" alt="Image 2" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
-  </div>
-
 </form>
 </div>
 </body>
@@ -112,8 +116,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 .image-container {
   display: none;
 }
-
-#desk-selection{
+.image-container-floor {
   display: none;
 }
 
@@ -198,29 +201,30 @@ button:hover {
 <script>
 
 function toggleSecondDropdown() {
-  // Get the selected value from the first dropdown
   var selectedValue = document.getElementById("floor-selection").value;
-
-  // Get the second dropdown element
   var secondDropdown = document.getElementById("desk-selection");
-
-  // Toggle the visibility of the second dropdown based on the selected value
   secondDropdown.style.display = (selectedValue !== "none") ? "block" : "none";
 }
 
-
+// Desks
 function toggleImage() {
-  // Get the selected value from the dropdown
-  var selectedValue = document.getElementById("floor-selection").value;
   var selectedValue = document.getElementById("desk-selection").value;
-
-  // Hide all images by default
   var allImages = document.getElementsByClassName("image-container");
   for (var i = 0; i < allImages.length; i++) {
     allImages[i].style.display = "none";
   }
+  if (selectedValue !== "none") {
+    document.getElementById(selectedValue).style.display = "block";
+  }
+}
 
-  // Show the selected image
+// Floor
+function toggleImageFloor() {
+  var selectedValue = document.getElementById("floor-selection").value;
+  var allImages = document.getElementsByClassName("image-container-floor");
+  for (var i = 0; i < allImages.length; i++) {
+    allImages[i].style.display = "none";
+  }
   if (selectedValue !== "none") {
     document.getElementById(selectedValue).style.display = "block";
   }
