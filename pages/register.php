@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,13 +16,13 @@
     <div class="mainform">
         <div class="container" id="container">
             <div class="form-container sign-in">
-                <form action="confi.php" method="post">
+                <form method="post" action="register.php">
                     <h1>Sign Up</h1>
-                    <input type="text" id="username" placeholder="Name:" required>
-                    <input type="email" id="email" placeholder="Email:" required>
-                    <input type="password" id="password" placeholder="Password:" required>
-                    <input type="password" id="cpassword" placeholder="Confirm Password:" required>
-                    <button class="btn">Sign Up</button>
+                    <input type="text" id="username" name="username" placeholder="Name:" required>
+                    <input type="email" id="email" name="email" placeholder="Email:" required>
+                    <input type="password" id="password" name="password_1" placeholder="Password:" required>
+                    <input type="password" id="cpassword" name="password_2" placeholder="Confirm Password:" required>
+                    <button class="btn" name="reg_user">Sign Up</button>
                     <a href="./login.php">Sign In</a>
                 </form>
             </div>

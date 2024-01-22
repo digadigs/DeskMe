@@ -14,7 +14,7 @@ $bno=mt_rand(100000000,9999999999);
 $query=mysqli_query($con,"insert into tblbookings(bookingNo,fullName,emailId,phoneNumber,bookingDate,bookingTime,noAdults,noChildrens) values('$bno','$fname','$emailid','$phonenumber','$bookingdate','$bookingtime','$noadults','$nochildrens')");
 if($query){
 echo '<script>alert("Your order sent successfully. Booking number is "+"'.$bno.'")</script>';
-echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
+// echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
 } else {
 echo "<script>alert('Something went wrong. Please try again.');</script>";
 }
@@ -64,60 +64,52 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
   </div>
   <div class="elem-group">
     <label for="room-selection">Select Preference:</label>
-    <select id="floor-selection" name="noadults" onchange="toggleSecondDropdown()" required>
+    <select class="form-control" id="floor-selection" name="noadults" onchange="toggleSecondDropdown()" onchange="toggleImage()" required>
         <option value="">Floor</option>
         <option value="Floor 1">Floor 1</option>
         <option value="Floor 2">Floor 2</option>
-        <option value="Floor 3">Floor 3</option>
+        <option value="Floor 2">Floor 3</option>
     </select>
   </div>
   <div class="elem-group">
-    <select id="desk-selection" name="nochildrens" onchange="toggleImage()" required>
+    <select class="form-control" id="desk-selection" name="nochildrens" onchange="toggleImage()" required>
         <option value="">Desks</option>
-        <option value="image1">Desk 1A</option>
-        <option value="image2">Desk 1B</option>
-        <option value="image3">Desk 1C</option>
-    </select>
-  </div>
-  <div class="elem-group">
-    <select id="desk-selection" name="nochildrens" onchange="toggleImage()" required>
-        <option value="">Desks</option>
-        <option value="image1">Desk 2A</option>
-        <option value="image2">Desk 2B</option>
-        <option value="image3">Desk 2C</option>
-    </select>
-  </div>
-  <div class="elem-group">
-    <select id="desk-selection" name="nochildrens" onchange="toggleImage()" required>
-        <option value="">Desks</option>
-        <option value="image1">Desk 3A</option>
-        <option value="image2">Desk 3B</option>
-        <option value="image3">Desk 3C</option>
+        <option value="Desk 1A">Desk 1A</option>
+        <option value="Desk 1B">Desk 1B</option>
+        <option value="Desk 1C">Desk 1C</option>
     </select>
   </div>
   <button type="submit" name="submit">Book Desk</button>
-  <a href="../index.php"><p style="float: right; margin-right: 10px; color: black;">Back to Home</p></a>
+  <a href="../pages/index.php"><p style="float: right; margin-right: 10px; color: black;">Back to Home</p></a>
 
-  <div id="image1" class="image-container">
-    <img src="../assets/Highlight 1A.png" alt="Image 1" style="width: 650px; height:350px; position: absolute; top: 170px; right: 215px;">
+  <!-- Desk -->
+  <div id="Desk 1A" class="image-container">
+    <img src="../assets/Highlight 1A.png" alt="Image 1" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
   </div>
-  <div id="image2" class="image-container">
-    <img src="../assets/Highlight 1B.png" alt="Image 2" style="width: 650px; height:350px; position: absolute; top: 170px; right: 215px;">
+  <div id="Desk 1B" class="image-container">
+    <img src="../assets/Highlight 1B.png" alt="Image 2" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
   </div>
-  <div id="image3" class="image-container">
-    <img src="../assets/Highlight 1C.png" alt="Image 3" style="width: 650px; height:350px; position: absolute; top: 170px; right: 215px;">
+  <div id="Desk 1C" class="image-container">
+    <img src="../assets/Highlight 1C.png" alt="Image 3" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
+  </div>
+
+  <!-- Floor -->
+  <div id="Floor 1" class="image-container">
+    <img src="../assets/Floor 1.png" alt="Image 1" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
+  </div>
+  <div id="Floor 2" class="image-container">
+    <img src="../assets/Floor 2.png" alt="Image 2" style="width: 650px; height:350px; position: absolute; top: 200px; right: 215px;">
   </div>
 
 </form>
 </div>
-  <!-- <a href="../index.php" style="color: black; text-decoration:none; position:absolute; left: 50%">Back to Home</a> -->
 </body>
 </html>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-#image1, #image2, #image3 {
+.image-container {
   display: none;
 }
 
@@ -127,7 +119,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 
 .container {
   background-color: white;
-  margin-top: 65px;
+  margin-top: 100px;
   margin-bottom: 25px;
   margin-left: 150px;
   margin-right: 150px;
@@ -219,6 +211,7 @@ function toggleSecondDropdown() {
 
 function toggleImage() {
   // Get the selected value from the dropdown
+  var selectedValue = document.getElementById("floor-selection").value;
   var selectedValue = document.getElementById("desk-selection").value;
 
   // Hide all images by default

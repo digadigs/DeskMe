@@ -30,7 +30,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel=" shortcut icon" href="../assets/./favicon.png"/>
-  <title>DeskMe | Add Sub admin</title>
+  <title>DeskMe | Add Sub-Admin</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -72,7 +72,7 @@ error:function (){}
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Create Subadmin</h1>
+            <h1>Create Sub-Admin</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -93,7 +93,7 @@ error:function (){}
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Fill the Info</h3>
+                <h3 class="card-title">Fill Info:</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -107,24 +107,24 @@ error:function (){}
                   </div>
 <!-- Subadmin Full Name--->
    <div class="form-group">
-                    <label for="exampleInputFullname">Full Name</label>
-                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Sub-Admin Full Name" required>
+                    <label for="exampleInputFullname">Name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Name:" required>
                   </div>
 <!-- Sub admin Email---->
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter email" required>
+                    <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter Email:" required>
                   </div>
 <!-- Sub admin Contact Number---->
                   <div class="form-group">
                     <label for="text">Mobile Number</label>
-                    <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter email" pattern="[0-9]{10}" title="10 numeric characters only" required>
+                    <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter Mobile Number:" pattern="[0-9]{10}" title="10 numeric characters only" required>
                   </div>
 
 <!---Password--->
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="inputpwd" name="inputpwd" placeholder="Password" required>
+                    <input type="password" class="form-control" id="inputpwd" name="inputpwd" placeholder="Enter Password:" required>
                   </div>
   
       
