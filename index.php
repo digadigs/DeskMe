@@ -35,6 +35,7 @@
                     </div>
                 </div>
             </header>
+            
             <div class="showcase-area">
                 <div class="container">
                     <div class="left">
@@ -51,6 +52,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="bottom-area">
                 <div class="container">
                     <div class="toggle-btn">
