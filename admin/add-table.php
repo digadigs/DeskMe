@@ -93,7 +93,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 <!--  Table No--->
    <div class="form-group">
                     <label for="exampleInputFullname">Desks</label>
-                    <input type="text" class="form-control" id="tableno" name="tableno" placeholder="Enter Table Number" required>
+                    <input type="text" class="form-control" id="tableno" name="tableno" placeholder="Enter Desk:" required>
                   </div>
 
 

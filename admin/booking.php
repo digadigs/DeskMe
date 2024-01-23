@@ -13,7 +13,7 @@ $bno=mt_rand(100000000,9999999999);
 //Code for Insertion
 $query=mysqli_query($con,"insert into tblbookings(bookingNo,fullName,emailId,phoneNumber,bookingDate,bookingTime,noAdults,noChildrens) values('$bno','$fname','$emailid','$phonenumber','$bookingdate','$bookingtime','$noadults','$nochildrens')");
 if($query){
-echo '<script>alert("Your order sent successfully. Booking number is "+"'.$bno.'")</script>';
+echo '<script>alert("Successful. Booking number is "+"'.$bno.'")</script>';
 // echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
 } else {
 echo "<script>alert('Something went wrong. Please try again.');</script>";
@@ -89,6 +89,12 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
         <option value="Desk 1A">Desk 1A</option>
         <option value="Desk 1B">Desk 1B</option>
         <option value="Desk 1C">Desk 1C</option>
+        <!-- <?php 
+        $ret=mysqli_query($con,"select id,tableNumber from tblrestables");
+        while($row=mysqli_fetch_array($ret)){
+        ?>
+                    <option value="<?php echo $row['id'];?>"><?php echo $row['tableNumber'];?></option>
+        <?php } ?> -->
     </select>
   </div>
   <button type="submit" name="submit">Book Desk</button>
