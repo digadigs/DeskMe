@@ -33,8 +33,9 @@
                     </div>
                     <div class="links">
                         <ul>
+                            <li><a href="./index.php">Home</a></li>
                             <li><a href="../admin/booking.php">Booking</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./contact.php">Support</a></li>
                             <?php  if (isset($_SESSION['username'])) : ?>
                             <li><a href="index.php?logout='1'">Logout</a></li>
                             <?php endif ?>
