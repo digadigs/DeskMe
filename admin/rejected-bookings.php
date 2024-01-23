@@ -81,7 +81,7 @@ else{
                     <th>Mobile No</th>
                     <th>Floor</th>
                     <th>Desks</th>
-                    <th>Booking Date/Time</th>
+                    <th>Check In/Out</th>
                      <th>Posting Date</th>
                     <th>Action</th>
                   </tr>
@@ -118,7 +118,7 @@ while($result=mysqli_fetch_array($query)){
                     <th>Mobile No</th>
                     <th>Floor</th>
                     <th>Desks</th>
-                    <th>Booking Date/Time</th>
+                    <th>Check In/Out</th>
                      <th>Posting Date</th>
                     <th>Action</th>
                   </tr>

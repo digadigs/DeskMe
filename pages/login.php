@@ -11,7 +11,7 @@
     <title>DeskMe | Sign In</title>
     <link rel=" shortcut icon" href="../assets/favicon.png"/>
   </head>
-  <body>
+  <body style="background-color: #f1f8fc;">
 
     <div class="mainform">
         <div class="container" id="container">

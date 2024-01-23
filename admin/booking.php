@@ -92,7 +92,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
     </select>
   </div>
   <button type="submit" name="submit">Book Desk</button>
-  <a href="../pages/index.php"><p style="float: right; margin-right: 10px; color: black;">Back to Home</p></a>
+  <a href="../pages/index.php"><p style="float: right; margin-right: 10px; color: black; font-family: Poppins, sans-serif; font-size: 15px;">Back to Home</p></a>
 
   <!-- Desk -->
   <div id="Desk 1A" class="image-container">
@@ -118,6 +118,10 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 }
 .image-container-floor {
   display: none;
+}
+
+body{
+  background-color: #f1f8fc;
 }
 
 .container {

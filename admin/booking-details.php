@@ -26,7 +26,7 @@ echo "<script>alert('Table already booked for given Date and Time. please choose
 $query=mysqli_query($con,"update tblbookings set adminremark='$oremark',boookingStatus='$estatus',tableId='$tbaleid' where id='$bid'");
 
 if($query){
-echo "<script>alert('Booking Details Updated   successfully.');</script>";
+echo "<script>alert('Updated Successfully.');</script>";
 //echo "<script type='text/javascript'> document.location = 'manage-classes.php'; </script>";
 } else {
 echo "<script>alert('Something went wrong. Please try again.');</script>";
@@ -126,7 +126,7 @@ while($result=mysqli_fetch_array($query)){
                   <tr>
                     <th>Desks</th>
                    <td><?php echo $result['noChildrens']?></td>
-                   <th>Booking Date / Time</th>
+                   <th>Check In/Out</th>
                    <td><?php echo $date=$result['bookingDate']?>/<?php echo $btime=$result['bookingTime']?></td>
                  </tr>
                  <tr>
@@ -204,7 +204,7 @@ while($result=mysqli_fetch_array($query)){
             <input type="hidden" name="bdate" value="<?php echo $date;?>">
             <input type="hidden" name="btime" value="<?php echo $btime;?>">
             <select class="form-control" name="table" id="table">
-            <option value="">Select Table</option>
+            <option value="">Select Desks</option>
             <?php $ret=mysqli_query($con,"select id,tableNumber from tblrestables");
 while($row=mysqli_fetch_array($ret)){
 ?>
@@ -214,7 +214,7 @@ while($row=mysqli_fetch_array($ret)){
 
 
         <p><textarea class="form-control" name="officialremak" placeholder="Official Remark" rows="5" required></textarea></p>
-        <input type="submit" class="btn btn-primary" name="submit" value="update">
+        <input type="submit" class="btn btn-primary" name="submit" value="Update">
 
         </form>
       </div>

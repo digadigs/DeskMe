@@ -14,7 +14,7 @@ $tno=$_POST['tableno'];
 $addedby=$_SESSION['aid'];
 $query=mysqli_query($con,"insert into tblrestables(tableNumber,AddedBy) values('$tno','$addedby')");
 if($query){
-echo "<script>alert('Table added successfully.');</script>";
+echo "<script>alert('Desk added successfully.');</script>";
 echo "<script type='text/javascript'> document.location = 'add-table.php'; </script>";
 } else {
 echo "<script>alert('Something went wrong. Please try again.');</script>";
@@ -29,7 +29,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel=" shortcut icon" href="../assets/./favicon.png"/>
-  <title>DeskMe | Add Table</title>
+  <title>DeskMe | Add Desks</title>
 
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
 
@@ -62,12 +62,12 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Table</h1>
+            <h1>Add Desks</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-              <li class="breadcrumb-item active">Add Table</li>
+              <li class="breadcrumb-item active">Add Desks</li>
             </ol>
           </div>
         </div>
@@ -83,7 +83,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Table Details</h3>
+                <h3 class="card-title">Desks Details</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -92,7 +92,7 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 
 <!--  Table No--->
    <div class="form-group">
-                    <label for="exampleInputFullname">Table No</label>
+                    <label for="exampleInputFullname">Desks</label>
                     <input type="text" class="form-control" id="tableno" name="tableno" placeholder="Enter Table Number" required>
                   </div>
 

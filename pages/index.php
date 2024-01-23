@@ -39,7 +39,7 @@
                             <li><a href="index.php?logout='1'">Logout</a></li>
                             <?php endif ?>
                         </ul>
-                        <a href="./admin/index.php">
+                        <a href="#">
                         <div class="profile">
                            <img src="../assets/user-login.png">
                         </div>
@@ -58,7 +58,7 @@
                         </div>
                         <p class="text">Ready to elevate your experience? Book now and unlock a world of possibilities. Your journey begins here!</p>
                         <div class="cta btn">
-                            <a href="./pages/register.php" class="btn">Follow Us</a>
+                            <a href="#" class="btn">Follow Us</a>
                         </div>
                     </div>
                     <div class="right ">
