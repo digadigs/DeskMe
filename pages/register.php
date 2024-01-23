@@ -20,8 +20,8 @@
                     <h1>Sign Up</h1>
                     <input type="text" id="username" name="username" placeholder="Name:" required>
                     <input type="email" id="email" name="email" placeholder="Email:" required>
-                    <input type="password" id="password" name="password_1" placeholder="Password:" required>
-                    <input type="password" id="cpassword" name="password_2" placeholder="Confirm Password:" required>
+                    <input type="password" id="password" name="password_1" placeholder="Password:" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 characters." required>
+                    <input type="password" id="cpassword" name="password_2" placeholder="Confirm Password:" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 characters." required>
                     <button class="btn" name="reg_user">Sign Up</button>
                     <a href="./login.php">Sign In</a>
                 </form>

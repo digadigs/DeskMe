@@ -20,7 +20,7 @@
                 <?php include('errors.php'); ?>
                     <h1 style="padding: 10px;">Sign In</h1>
                     <input type="text" name="username" placeholder="Name:" required>
-                    <input type="password" name="password" placeholder="Password:" required>
+                    <input type="password" name="password" placeholder="Password:" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 characters." required>
                     <button class="btn" name="login_user">Sign In</button>
                     <a href="./register.php">Sign Up</a>
                 </form>
