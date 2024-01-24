@@ -52,7 +52,7 @@
         <section>
             <div class="row">
                 <h1>Our Team</h1>
-                <h1 style="font-size: 15px;">Description</h1>
+                <h1 style="font-size: 15px;">ISPM | Team 6</h1>
             </div>
             <div class="row">
                 <!-- Column 1-->
@@ -62,7 +62,7 @@
                     <img src="../assets/client-1.jpg" />
                     </div>
                     <h3>Peter Sthanlie Rayos</h3>
-                    <p>Project Manager</p>
+                    <p>Project Manager / Documenter</p>
                     <div class="icons">
                     <a href="#">
                         <i class="fab fa-twitter"></i>
@@ -86,7 +86,7 @@
                     <img src="../assets/jm.jpg" />
                     </div>
                     <h3>Johnmack Faeldonia</h3>
-                    <p>Developer / Documenter</p>
+                    <p>Back-End Developer / Documenter</p>
                     <div class="icons">
                     <a href="#">
                         <i class="fab fa-twitter"></i>
@@ -110,7 +110,7 @@
                     <img src="../assets/client-2.jpg" />
                     </div>
                     <h3>John Carlo Diga</h3>
-                    <p>Designer / Developer</p>
+                    <p>Project Leader / Developer / Designer</p>
                     <div class="icons">
                     <a href="#">
                         <i class="fab fa-twitter"></i>
@@ -187,7 +187,7 @@
               <img src="../assets/client-5.jpg" />
             </div>
             <h3>Jireh Belen</h3>
-            <p>Analyst</p>
+            <p>System Analyst</p>
             <div class="icons">
               <a href="#">
                 <i class="fab fa-twitter"></i>
