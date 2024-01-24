@@ -104,30 +104,7 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview" style="display: none;">
-              <li class="nav-item">
-                <a href="new-bookigs.php" class="nav-link">  
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>New</p>
-                </a>
-              </li>   
-
-              <li class="nav-item">
-                <a href="accepted-bookings.php" class="nav-link">  
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Accepted</p>
-                </a>
-              </li>
-
-                <li class="nav-item">
-                <a href="rejected-bookings.php" class="nav-link">  
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Rejected</p>
-                </a>
-              </li>
-
-    
-
+            <ul class="nav nav-treeview" style="display: none;">         
                   <li class="nav-item">
                 <a href="all-bookings.php" class="nav-link">  
                   <i class="far fa-circle nav-icon"></i>

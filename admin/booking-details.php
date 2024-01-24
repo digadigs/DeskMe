@@ -136,7 +136,7 @@ while($result=mysqli_fetch_array($query)){
 
  
 
-<?php if($result['boookingStatus']!=''):?>
+<!-- <?php if($result['boookingStatus']!=''):?>
             <tr>
                   <th>Booking  Status</th>
                     <td><?php echo $result['boookingStatus']?></td>
@@ -154,7 +154,7 @@ while($result=mysqli_fetch_array($query)){
   <td colspan="4" style="text-align:center;">
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Take Action</button>
 </td>
-<?php endif;?>
+<?php endif;?> -->
 
          <?php $cnt++;} ?>
              
@@ -182,7 +182,7 @@ while($result=mysqli_fetch_array($query)){
 <!-- ./wrapper -->
 
 
-<div id="myModal" class="modal fade" role="dialog">
+<!-- <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -200,7 +200,7 @@ while($result=mysqli_fetch_array($query)){
           </select></p>
 
 
-          <!-- <p id='rtable'>
+          <p id='rtable'>
             <input type="hidden" name="bdate" value="<?php echo $date;?>">
             <input type="hidden" name="btime" value="<?php echo $btime;?>">
             <select class="form-control" name="table" id="table">
@@ -210,7 +210,7 @@ while($row=mysqli_fetch_array($ret)){
 ?>
             <option value="<?php echo $row['id'];?>"><?php echo $row['tableNumber'];?></option>
 <?php } ?>
-          </select></p> -->
+          </select></p>
 
 
         <p><textarea class="form-control" name="officialremak" placeholder="Official Remark" rows="5" required></textarea></p>
@@ -224,7 +224,7 @@ while($row=mysqli_fetch_array($ret)){
     </div>
 
   </div>
-</div>
+</div> -->
 
 
 
