@@ -21,7 +21,7 @@ $endTime = date("H:i:s", strtotime('+30 minutes', $btime));
 $ret=mysqli_query($con,"SELECT * FROM tblbookings where ('$btime' BETWEEN time(bookingTime) and '$endTime' || '$endTime' BETWEEN time(bookingTime) and '$endTime' || bookingTime BETWEEN '$btime' and '$endTime') and tableId='$tbaleid' and bookingDate='$bdate' and boookingStatus='Accepted'");
  $count=mysqli_num_rows($ret);
 if($count>0){
-echo "<script>alert('Table already booked for given Date and Time. please choose another table');</script>";
+echo "<script>alert('Desk already booked. Please choose another Desk');</script>";
 } else{
 $query=mysqli_query($con,"update tblbookings set adminremark='$oremark',boookingStatus='$estatus',tableId='$tbaleid' where id='$bid'");
 
@@ -200,7 +200,7 @@ while($result=mysqli_fetch_array($query)){
           </select></p>
 
 
-          <p id='rtable'>
+          <!-- <p id='rtable'>
             <input type="hidden" name="bdate" value="<?php echo $date;?>">
             <input type="hidden" name="btime" value="<?php echo $btime;?>">
             <select class="form-control" name="table" id="table">
@@ -210,7 +210,7 @@ while($row=mysqli_fetch_array($ret)){
 ?>
             <option value="<?php echo $row['id'];?>"><?php echo $row['tableNumber'];?></option>
 <?php } ?>
-          </select></p>
+          </select></p> -->
 
 
         <p><textarea class="form-control" name="officialremak" placeholder="Official Remark" rows="5" required></textarea></p>
