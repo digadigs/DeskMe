@@ -58,9 +58,6 @@
                             <h1>Welcome, <?php echo $_SESSION['username']; ?>.</h1>
                         </div>
                         <p class="text">Ready to elevate your experience? Book now and unlock a world of possibilities. Your journey begins here!</p>
-                        <div class="cta btn">
-                            <a href="#" class="btn">Follow Us</a>
-                        </div>
                     </div>
                     <div class="right ">
                         <img src="../assets/user-login1.png" alt="" class="person">
