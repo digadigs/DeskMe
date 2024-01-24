@@ -37,7 +37,7 @@
                             <li><a href="#">About</a></li>
                             <li><a href="./login.php">Login</a></li>
                         </ul>
-                        <a href="#">
+                        <a href="../admin/index.php">
                         <div class="profile">
                            <img src="../assets/admin.png">
                         </div>
