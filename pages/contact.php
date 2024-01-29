@@ -120,6 +120,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="bottom-area">
                 <div class="container">
                     <div class="toggle-btn">
